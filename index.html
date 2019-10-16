@@ -13,9 +13,9 @@
 
 <body>
   <div id="slider" class="slider">
-    <div class="slider-slides-wrapper">
+    <div class="slider-slides-wrapper" id="slide-wrapper">
       <div class="slider-slide">
-        <img src="images/1.jpg" />
+        <img src="images/1.jpg" id="imagen1"/>
       </div>
       <div class="slider-slide">
         <img src="images/2.jpg" />
@@ -26,18 +26,20 @@
     </div>
     <div class="slider-controls">
       <div class="slider-control">
-        <i class="fas fa-angle-left"></i>
+        <a class="slider-control">
+          <a href="javascript: moverIzquierda()"><i class="fas fa-angle-left"></i></a>
       </div>
       <div class="slider-control">
-        <i class="fas fa-angle-right"></i>
+        <a href="javascript: moverDerecha()"><i class="fas fa-angle-right" id="derecha"></i></a>
       </div>
     </div>
     <nav class="slider-nav">
-      <div class="slider-nav-item active"></div>
-      <div class="slider-nav-item"></div>
-      <div class="slider-nav-item"></div>
+      <div class="slider-nav-item active" id="dot1" onclick="img1()"></div>
+      <div class="slider-nav-item" id="dot2" onclick="img2()"></div>
+      <div class="slider-nav-item" id="dot3" onclick="img3()"></div>
     </nav>
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
